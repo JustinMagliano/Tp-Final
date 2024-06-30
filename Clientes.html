@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidad-Clientes</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="img" href="img/Diseño sin título.png">
+</head>
+<body>
+    <script src="header.js"></script>
+    <body class="cuerpo">
+        <button id="btnNuevo" onclick="AbrirClientes()">Nuevo</button>
+        <div id="myModal3" class="modal3">
+            <div class="modal-content3">
+                <span class="close3" onclick="CerrarClientes()">&times;</span>
+                <form action="javascript:none"><h1>Nuevo Cliente</h1>
+                    <label for="">Apellido</label> <input type="text" id="txtApellidoN" placeholder="Agregar un Apellido"><br>
+                    <label for="">Nombre</label><input type="text" id="txtNombreN"placeholder="Agrega un Nombre"><br>
+                    <label for="">Pedido</label><input type="text"id="txtPedidoN" placeholder="Agrega un pedido"><br>
+                    <label for="">Fecha de Entrega</label><input type="date"id="txtFechaN"><br>
+                    <button onclick="GuardarNClientes()">Guardar</button>
+                </form>
+            </div>
+        </div><br>
+        <button id="btnMod" onclick="Abrir2Clientes()">Modificar</button><input type="text"id="txtIdModificar2" placeholder="Ingrese un Id">
+        <div id="myModal4" class="modal4">
+            <div class="modal-content4">
+                <span class="close4" onclick="Cerrar2Clientes()">&times;</span>
+                <form action="javascript:none"><h1>Modificar Cliente</h1>
+                    <label for="">Apellido</label> <input type="text" id="txtApellidoM" placeholder="Agregar un Apellido"><br>
+                    <label for="">Nombre</label><input type="text" id="txtNombreM" placeholder="Agrega un Nombre"><br>
+                    <label for="">Pedido</label><input type="text"id="txtPedidoM" placeholder="Agrega un Pedido"><br>
+                    <label for="">Fecha de Entrega</label><input type="date"id="txtFechaM"><br>
+                    <button onclick="GuardarMClientes()">Guardar</button>
+                </form>
+            </div>
+        </div><br>
+        <table id="tabla"><h1 id="t2">Clientes</h1>
+            <button onclick="ApiClientes()" id="Actualizar">Actualizar</button>
+            <tr>
+                <th><button onclick="ConfirmacionClientes()" id="btnBorrar">Borrar</button></th>
+                <th>Id</th>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Pedido</th>
+                <th>Fecha</th>
+            </tr>
+            <tbody id="resultado"></tbody>
+        </table>
+    </body>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+    <script src="scriptClientes.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidad-Productos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="img" href="img/Diseño sin título.png">
+</head>
+<body>
+    <script src="header.js"></script>
+    <body class="cuerpo">
+        <button id="btnNuevo" onclick="Abrir()">Nuevo</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="Cerrar()">&times;</span>
+                <form action="javascript:none"><h1>Nuevo Producto</h1>
+                    <label for="">Titulo</label> <input type="text" id="txtTituloN" placeholder="Agregar un texto"><br>
+                    <label for="">Precio en Pesos</label><input type="number" id="txtPrecioPesoN"placeholder="Numeros"><br>
+                    <label for="">Precio en Dolares</label><input type="number"id="txtPrecioDolarN" placeholder="Numeros"><br>
+                    <label for="">Fecha</label><input type="date"id="txtFechaN"><br>
+                    <button onclick="GuardarN()">Guardar</button>
+                </form>
+            </div>
+        </div><br>
+        <button id="btnMod" onclick="Abrir2()">Modificar</button><input type="text" id="txtIdModificar" placeholder="Ingrese un Id">
+        <div id="myModal2" class="modal2">
+            <div class="modal-content2">
+                <span class="close2" onclick="Cerrar2()">&times;</span>
+                <form action="javascript:none"><h1>Modificar Productos</h1>
+                    <label for="">Titulo</label> <input type="text" id="txtTituloM" placeholder="Agregar un texto"><br>
+                    <label for="">Precio en Pesos</label><input type="number" id="txtPrecioPesoM" placeholder="Numeros"><br>
+                    <label for="">Precio en Dolares</label><input type="number"id="txtPrecioDolarM" placeholder="Numeros"><br>
+                    <label for="">Fecha</label><input type="date"id="txtFechaM"><br>
+                    <button onclick="GuardarM()">Guardar</button>
+                </form>
+            </div>
+        </div><br>
+        <!--<label for="">Id</label><input type="text"class="txtIdBuscar" placeholder="Ingrese un Id"><button class="buscarProd" onkeyup="Filtrar()">Buscar</button>
+        -->
+        <table id="tabla"><h1 id="t2">Productos</h1>
+            <button onclick="Api()" id="Actualizar">Actualizar</button>
+            <tr>
+                <th><button onclick="Confirmacion()" id="btnBorrar">Borrar</button></th>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Precio Peso</th>
+                <th>Precio Dolar</th>
+                <th>Fecha</th>
+            </tr>
+            <tbody id="resultado"></tbody>
+        </table>
+    </body>
+    <script src="footer.js"></script>
+    <script src="scriptProductos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
